@@ -2,34 +2,34 @@ import React, { useState } from 'react';
 import dscrd from './imgs/DIS.png';
 import icoEN from './imgs/ENG.png';
 import icoHE from './imgs/HEB.png';
-const locEN = async ()=>{
-	let data = await fetch('locales/en/translation.json');
-	let json = data.json();
-	console.log("1: ")
-	console.log(json);
-	return json;
-}
-const locHE =()=>{
-	fetch('locales/he/translation.json'
-		,{
-			headers : {
-				'Content-Type': 'application/json',
-				'Accept': 'application/json'
-			}
-		})
-	.then(function(response){
-		console.log(response)
-		return response.json();
-	}).then(function(myJson){
-		console.log(myJson)
-	})
-}
+// const locEN = async ()=>{
+// 	let data = await fetch('locales/en/translation.json');
+// 	let json = data.json();
+// 	console.log("1: ")
+// 	console.log(json);
+// 	return json;
+// }
+// const locHE =()=>{
+// 	fetch('locales/he/translation.json'
+// 		,{
+// 			headers : {
+// 				'Content-Type': 'application/json',
+// 				'Accept': 'application/json'
+// 			}
+// 		})
+// 	.then(function(response){
+// 		console.log(response)
+// 		return response.json();
+// 	}).then(function(myJson){
+// 		console.log(myJson)
+// 	})
+// }
 // const getLang = () =>{
 // 	let jData = locEN().then((res) => return res);
 // 	return jData;
 // }
 //import { useTranslation } from 'react-i18next';
-export async function Menu1(){
+export function Menu1(){
 	var lFlag;
 	if(!(lFlag = localStorage.getItem('langf')))
 		lFlag=false;
@@ -46,7 +46,7 @@ export async function Menu1(){
     return icoHE;
   return icoEN;
 	}
-	let curLang = await locEN();
+	let curLang = {lang:"en"};
 	let title = curLang["lang"];
 	return (
 			<div className="App">
