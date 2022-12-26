@@ -32,12 +32,16 @@ import icoHE from './imgs/HEB.png';
 export function Menu1(){
 	var lFlag;
 	if(!(lFlag = localStorage.getItem('langf')))
-		lFlag=false;
-	const [locale, setLocale] = useState("en");
+		lFlag="en";
+	console.log(lFlag + "wat")
+	const [locale, setLocale] = useState(lFlag);
 	const changeLang = () => {
 		setLocale(lastLocale => {
-			if(lastLocale === "en")
+			if(lastLocale === "en"){
+				localStorage.setItem('langf',"he")
 				return "he"
+			}
+			localStorage.setItem('langf',"en")
 			return "en"
 		})
 	}
