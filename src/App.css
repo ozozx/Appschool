@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  display: block;
+  margin: auto;
 }
 
 .App-logo {
@@ -36,3 +38,57 @@
     transform: rotate(360deg);
   }
 }
+h1{
+  text-align: center;
+}
+div{
+  margin: 0px 20% 0px 20%;
+}
+a{
+  display: block;
+  align-content: center;
+}
+a#ALANG{
+  float: left;
+  height: 120px;
+  width: 160px;
+}
+a#ADIS{
+  margin: 0px;
+  padding: 0px;
+  height: 120px;
+  width: 160px;
+  float: right;
+}
+img{
+  display: block;
+  margin: auto;
+}
+img#LANG{
+  display: block;
+  margin: auto;
+  height: 120px;
+  width: 160px;
+}
+img#DIS{
+  display: block;
+  margin: auto;
+  height: 120px;
+  width: 120px;
+}
+table{
+  margin: auto;
+  margin-top: 20px;
+  width: 70%;
+}
+td{
+  padding: 100px;
+}
+html{
+  background-image: linear-gradient(to top,#000000,#50fa50);
+  height: 99.8%;
+  width: 99.9%;
+}
+/**{
+  border: 1px dotted;
+}*/
