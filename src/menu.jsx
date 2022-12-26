@@ -46,12 +46,12 @@ export function Menu1(){
     return icoHE;
   return icoEN;
 	}
-	let curLang = {lang:"en"};
-	let title = curLang["lang"];
+	let curLang = {"en":"english", "he":"hebrew"};
+	let title = curLang[locale];
 	return (
 			<div className="App">
 	      <div>
-	      	{console.log(title), console.log("dat")}
+	      	<h1>{console.log(title), console.log("dat"),title}</h1>
 	      </div>
     	  <table>
         	<tbody>
